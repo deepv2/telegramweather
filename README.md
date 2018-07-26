@@ -9,12 +9,22 @@ Python weather-api wrapper for Yahoo! weather, I created a script for a Telegram
 * ```/weather``` gets the date, conditions, high, and low for the current day.
 * ```/forecast``` gets the date, conditions, high, and low for the next 5 days.
 * ```/time``` sets a daily timer at a specified hour and minute to text you the weather.
+* ```/reset``` removes all daily timers set with /time.
 * ```/help``` prints out this help information.
 
+Notice: After typing ```/time``` once and setting a daily timer, typing ```/time``` again will not prompt you for a time, but inputting a time
+anyways will still function normally and set a daily weather reminder.
+
 #### Installation
+**Before you use this script, you have to make a new bot with Telegram and copy the API token key!**
+Instructions to make a bot can be found by messaging @BotFather in Telegram. Copy the API token key and paste
+it in the section in main() with the variable token:
+```Python
+token = "INSERT API KEY HERE!"
+```
+
 It is highly recommended that you use virtualenv to make a virtual environment for this program, so that you do not contaminate your global
-Python installation. Instructions can be found by searching online.
-This specific bot script was built and tested with Python 3.6.6.
+Python installation. Instructions for virtual environments can be found by searching online. This specific bot script was built and tested with Python 3.6.6 on Ubuntu 18.04.
 
 To install dependencies and run the program:
 ```Python
